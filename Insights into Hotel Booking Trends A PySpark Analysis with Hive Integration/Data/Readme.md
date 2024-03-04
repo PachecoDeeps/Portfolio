@@ -1,5 +1,5 @@
 ## Insights into Hotel Booking Trends: A PySpark Analysis with Hive Integration
-By: Michael Pacheco 
+
 
 # Introduction
 In the face of changing hotel booking trends, the hospitality industry must continue to be competitive, maximize revenue, and maintain customer satisfaction. Making effective management decisions requires an understanding of these trends and the ability to adjust to them.
