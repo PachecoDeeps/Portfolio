@@ -1,4 +1,4 @@
-# Insights into Hotel Booking Trends: A PySpark Analysis with Hive Integration
+## Insights into Hotel Booking Trends: A PySpark Analysis with Hive Integration
 By: Michael Pacheco 
 
 # Introduction
