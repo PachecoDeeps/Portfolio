@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parallel18 Startup Form and Recommendations</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Raleway', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+    
+    .logo {
+      margin-bottom: 20px;
+    }
+    
+    .logo img {
+      max-width: 200px;
+      height: auto;
+    }
+      
+    form {
+      background-color: #000;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+      width: 300px; 
+      color: #fff;
+    }
+      
+    h1 {
+      text-align: center;
+      font-weight: 600;
+    }
+    
+    label {
+      margin-top: 10px;
+      display: block;
+    }  
+    select {
+      background-color: #fff;
+      color: #000;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+    
+    input[type="submit"] {
+      background-color: #fff;
+      color: #000;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    input[type="submit"]:hover {
+      background-color: #ccc;
+    }
+    
+    .results {
+      background-color: #000;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+      width: 80%;
+      color: #fff;
+      margin-top: 40px;
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #555;
+    }
+    
+    th {
+      background-color: #222;
+    }
+  </style>
+</head>
+<body>
+  <div class="logo">
+      <img src="{{ url_for('static', filename='images/P18-Logos-01.webp') }}" alt="Parallel18 Logo">
+  </div>
+
+  <form action="/recommend" method="post">
+    <h1>Startup Information</h1>
+      
+    <label for="industry">Industry:</label>
+    <select id="industry" name="Industry">
+      <option value="">Select an industry</option>
+      <option value="Aerospace">Aerospace</option>
+      <option value="Healthcare and Biotechnology">Healthcare and Biotechnology</option>
+      <option value="Life Sciences">Life Sciences</option>
+      <option value="Food and Beverage">Food and Beverage</option>
+      <option value="Financial Technology">Financial Technology</option>
+      <option value="Legal Technology">Legal Technology</option>
+      <option value="Real Estate Technology">Real Estate Technology</option>
+      <option value="Education Technology">Education Technology</option>
+      <option value="Transportation and Mobility">Transportation and Mobility</option>
+      <option value="Agriculture Technology">Agriculture Technology</option>
+      <option value="Travel and Hospitality Technology">Travel and Hospitality Technology</option>
+      <option value="Artificial Intelligence and Machine Learning">Artificial Intelligence and Machine Learning</option>
+      <option value="Gaming and Esports">Gaming and Esports</option>
+      <option value="Supply Chain and Logistics Technology">Supply Chain and Logistics Technology</option>
+      <option value="Social Media and Networking">Social Media and Networking</option>
+      <option value="E-Commerce and Online Retail">E-Commerce and Online Retail</option>
+    </select>
+      
+    <label for="stage">Stage:</label>
+    <select id="stage" name="Stage">
+      <option value="">Select a stage</option>
+      <option value="Pre-Seed">Pre-Seed</option>
+      <option value="Seed">Seed</option>
+    </select>
+    
+    <label for="amount">Amount Seeking:</label>
+    <select id="amount" name="Amount Seeking">
+      <option value="">Select an amount range</option>
+      <option value="0-100000">$0 - $100,000</option>
+      <option value="100001-500000">$100,001 - $500,000</option>
+      <option value="500001-1000000">$500,001 - $1,000,000</option>
+      <option value="1000001-5000000">$1,000,001 - $5,000,000</option>
+      <option value="5000001+">$5,000,001+</option>
+    </select>
+      
+    <input type="submit" value="Find Matching Investors">
+  </form>
+</body>
+</html>
